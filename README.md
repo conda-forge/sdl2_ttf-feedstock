@@ -15,14 +15,16 @@ Simple DirectMedia Layer is a cross-platform development library designed to pro
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/sdl2_ttf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/sdl2_ttf-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/sdl2_ttf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/sdl2_ttf-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/sdl2_ttf-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/sdl2-ttf-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/sdl2_ttf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/sdl2_ttf-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/sdl2_ttf-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/sdl2_ttf-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/sdl2_ttf-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/sdl2-ttf-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sdl2_ttf/badges/version.svg)](https://anaconda.org/conda-forge/sdl2_ttf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sdl2_ttf/badges/downloads.svg)](https://anaconda.org/conda-forge/sdl2_ttf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-sdl2_ttf-green.svg)](https://anaconda.org/conda-forge/sdl2_ttf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sdl2_ttf.svg)](https://anaconda.org/conda-forge/sdl2_ttf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sdl2_ttf.svg)](https://anaconda.org/conda-forge/sdl2_ttf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sdl2_ttf.svg)](https://anaconda.org/conda-forge/sdl2_ttf) |
 
 Installing sdl2_ttf
 ===================
@@ -67,6 +69,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
