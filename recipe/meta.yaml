@@ -30,8 +30,6 @@ requirements:
     - freetype
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '*' }}  # [win]
   commands:
     - test -f $PREFIX/lib/libSDL2_ttf.a  # [unix]
     - test -f $PREFIX/lib/libSDL2_ttf.dylib  # [osx]
