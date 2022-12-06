@@ -1,15 +1,15 @@
-{% set version = "2.0.15" %}
+{% set version = "2.0.18" %}
 
 package:
   name: sdl2_ttf
   version: {{ version }}
 
 source:
-  url:  https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-{{ version }}.tar.gz
-  sha256: a9eceb1ad88c1f1545cd7bd28e7cbc0b2c14191d40238f531a15b01b1b22cd33
+  url:  https://github.com/libsdl-org/SDL_ttf/archive/refs/tags/release-{{ version }}.tar.gz
+  sha256: 6b61544441b72bdfa1ced89034c6396fe80228eff201eb72c5f78e500bb80bd0
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
