@@ -20,6 +20,7 @@ requirements:
     - autoconf  # [unix]
     - automake  # [unix]
     - libtool  # [unix]
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
   host:
     - sdl2 2.0.*
