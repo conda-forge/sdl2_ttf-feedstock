@@ -40,7 +40,7 @@ test:
 
 about:
   home: https://github.com/libsdl-org/SDL_ttf
-  license: ZLIB
+  license: Zlib
   license_file: COPYING.txt
   summary: "Library for using TrueType fonts in SDL applications"
   description: |
