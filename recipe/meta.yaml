@@ -24,7 +24,7 @@ requirements:
     - sdl2
     - freetype
     # needed by freetype on linux...
-    - zlib
+    - zlib       # [linux]
 
 test:
   commands:
