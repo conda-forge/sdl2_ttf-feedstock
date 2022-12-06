@@ -13,11 +13,12 @@ build:
 
 requirements:
   build:
-    - cmake  # [win]
-    - autoconf  # [unix]
-    - automake  # [unix]
-    - libtool  # [unix]
+    - cmake      # [win]
+    - autoconf   # [unix]
+    - automake   # [unix]
     - gnuconfig  # [unix]
+    - libtool    # [unix]
+    - make       # [unix]
     - {{ compiler('c') }}
   host:
     - sdl2 2.0.*
