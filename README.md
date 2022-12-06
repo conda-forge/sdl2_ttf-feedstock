@@ -1,7 +1,7 @@
 About sdl2_ttf
 ==============
 
-Home: https://www.libsdl.org/projects/SDL_ttf/
+Home: https://github.com/libsdl-org/SDL_ttf
 
 Package license: ZLIB
 
@@ -9,11 +9,11 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sdl2_ttf-feedst
 
 Summary: Library for using TrueType fonts in SDL applications
 
-Development: http://hg.libsdl.org/SDL_ttf/
+Development: https://github.com/libsdl-org/SDL_ttf
 
-Documentation: https://www.libsdl.org/projects/SDL_ttf/docs/index.html
+Documentation: https://wiki.libsdl.org/SDL_ttf
 
-Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
+Support for TrueType (.ttf) font files with Simple Directmedia Layer.
 
 
 Current build status
@@ -191,4 +191,5 @@ Feedstock Maintainers
 =====================
 
 * [@dschreij](https://github.com/dschreij/)
+* [@h-vetinari](https://github.com/h-vetinari/)
 
