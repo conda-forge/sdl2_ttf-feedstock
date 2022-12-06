@@ -25,7 +25,8 @@ requirements:
   host:
     - sdl2 2.0.*
     - freetype
-
+    # needed by freetype on linux...
+    - zlib
   run:
     - sdl2 2.0.*
     - freetype
