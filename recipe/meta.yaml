@@ -13,13 +13,9 @@ build:
 
 requirements:
   build:
-    - cmake      # [win]
-    - autoconf   # [unix]
-    - automake   # [unix]
-    - gnuconfig  # [unix]
-    - libtool    # [unix]
-    - make       # [unix]
     - {{ compiler('c') }}
+    - cmake
+    - ninja
   host:
     - sdl2
     - freetype
