@@ -1,18 +1,20 @@
-setlocal EnableDelayedExpansion
-
-copy %RECIPE_DIR%\CMakeLists.txt .\CMakeLists.txt
+@echo on
 
 :: Make a build folder and change to it.
 mkdir build
 cd build
 
-:: Configure using the CMakeFiles
-cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" -DCMAKE_BUILD_TYPE:STRING=Release .. 
-if errorlevel 1 exit 1
+cmake -G Ninja ^
+    -DBUILD_SHARED_LIBS=ON ^
+    -DCMAKE_BUILD_TYPE:STRING=Release ^
+    -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS:BOOL=ON ^
+    -DCMAKE_INSTALL_PREFIX:PATH=%LIBRARY_PREFIX% ^
+    ..
+if %ERRORLEVEL% neq 0 exit 1
 
 :: Build!
-nmake
-if errorlevel 1 exit 1
+cmake --build .
+if %ERRORLEVEL% neq 0 exit 1
 
-nmake install
-if errorlevel 1 exit 1
+cmake --install .
+if %ERRORLEVEL% neq 0 exit 1
