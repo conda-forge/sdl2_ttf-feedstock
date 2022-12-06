@@ -1,30 +1,30 @@
-{% set name = "SDL2_ttf" %}
 {% set version = "2.0.15" %}
-{% set sha256 = "a9eceb1ad88c1f1545cd7bd28e7cbc0b2c14191d40238f531a15b01b1b22cd33" %}
 
 package:
-  name: {{ name|lower }}
+  name: sdl2_ttf
   version: {{ version }}
 
 source:
-  fn:  {{ name }}-{{ version }}.tar.gz
-  url:  https://www.libsdl.org/projects/SDL_ttf/release/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url:  https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-{{ version }}.tar.gz
+  sha256: a9eceb1ad88c1f1545cd7bd28e7cbc0b2c14191d40238f531a15b01b1b22cd33
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - cmake  # [win]
-    - autoconf  # [unix]
-    - automake  # [unix]
-    - libtool  # [unix]
+    - cmake      # [win]
+    - autoconf   # [unix]
+    - automake   # [unix]
+    - gnuconfig  # [unix]
+    - libtool    # [unix]
+    - make       # [unix]
     - {{ compiler('c') }}
   host:
     - sdl2 2.0.*
     - freetype
-
+    # needed by freetype on linux...
+    - zlib
   run:
     - sdl2 2.0.*
     - freetype
@@ -40,15 +40,16 @@ test:
     - if not exist %LIBRARY_INC%\\SDL2\\SDL_ttf.h exit 1  # [win]
 
 about:
-  home: https://www.libsdl.org/projects/SDL_ttf/
-  license: ZLIB
+  home: https://github.com/libsdl-org/SDL_ttf
+  license: Zlib
   license_file: COPYING.txt
   summary: "Library for using TrueType fonts in SDL applications"
   description: |
-    Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
-  doc_url: https://www.libsdl.org/projects/SDL_ttf/docs/index.html
-  dev_url: http://hg.libsdl.org/SDL_ttf/
+    Support for TrueType (.ttf) font files with Simple Directmedia Layer.
+  doc_url: https://wiki.libsdl.org/SDL_ttf
+  dev_url: https://github.com/libsdl-org/SDL_ttf
 
 extra:
   recipe-maintainers:
+    - h-vetinari
     - dschreij
