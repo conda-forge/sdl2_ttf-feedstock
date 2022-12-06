@@ -9,7 +9,7 @@ source:
   sha256: a9eceb1ad88c1f1545cd7bd28e7cbc0b2c14191d40238f531a15b01b1b22cd33
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -21,13 +21,10 @@ requirements:
     - make       # [unix]
     - {{ compiler('c') }}
   host:
-    - sdl2 2.0.*
+    - sdl2
     - freetype
     # needed by freetype on linux...
-    - zlib
-  run:
-    - sdl2 2.0.*
-    - freetype
+    - zlib       # [linux]
 
 test:
   commands:
