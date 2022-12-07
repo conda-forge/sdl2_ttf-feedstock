@@ -43,7 +43,7 @@ test:
 about:
   home: https://github.com/libsdl-org/SDL_ttf
   license: Zlib
-  license_file: COPYING.txt
+  license_file: LICENSE.txt
   summary: "Library for using TrueType fonts in SDL applications"
   description: |
     Support for TrueType (.ttf) font files with Simple Directmedia Layer.
