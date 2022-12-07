@@ -1,4 +1,4 @@
-{% set version = "2.0.18" %}
+{% set version = "2.20.1" %}
 
 package:
   name: sdl2_ttf
@@ -6,10 +6,13 @@ package:
 
 source:
   url:  https://github.com/libsdl-org/SDL_ttf/archive/refs/tags/release-{{ version }}.tar.gz
-  sha256: 6b61544441b72bdfa1ced89034c6396fe80228eff201eb72c5f78e500bb80bd0
+  sha256: 520bb84423dc705164781b6f00d81e7016fbdd884b2bd2b2f24335269a0130a7
 
 build:
   number: 0
+  run_exports:
+    # see https://abi-laboratory.pro/tracker/timeline/sdl_ttf
+    - {{ pin_subpackage("sdl2_ttf", max_pin="x") }}
 
 requirements:
   build:
@@ -19,6 +22,7 @@ requirements:
   host:
     - sdl2
     - freetype
+    - harfbuzz
     # needed by freetype on linux...
     - zlib       # [linux]
 
@@ -40,7 +44,7 @@ test:
 about:
   home: https://github.com/libsdl-org/SDL_ttf
   license: Zlib
-  license_file: COPYING.txt
+  license_file: LICENSE.txt
   summary: "Library for using TrueType fonts in SDL applications"
   description: |
     Support for TrueType (.ttf) font files with Simple Directmedia Layer.
