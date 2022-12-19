@@ -3,7 +3,7 @@ About sdl2_ttf
 
 Home: https://github.com/libsdl-org/SDL_ttf
 
-Package license: ZLIB
+Package license: Zlib
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sdl2_ttf-feedstock/blob/main/LICENSE.txt)
 

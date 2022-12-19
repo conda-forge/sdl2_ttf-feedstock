@@ -12,6 +12,10 @@ docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 freetype:
 - '2'
+harfbuzz:
+- '6'
+sdl2:
+- '2'
 target_platform:
 - linux-64
 zlib:
