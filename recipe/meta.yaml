@@ -9,7 +9,7 @@ source:
   sha256: 0fe9d587cdc4e6754b647536d0803bea8ca6ac77146c4209e0bed22391cf8241
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # see https://abi-laboratory.pro/tracker/timeline/sdl_ttf
     - {{ pin_subpackage("sdl2_ttf", max_pin="x") }}
