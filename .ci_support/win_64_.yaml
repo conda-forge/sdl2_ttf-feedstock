@@ -7,7 +7,7 @@ channel_targets:
 freetype:
 - '2'
 harfbuzz:
-- '6'
+- '7'
 sdl2:
 - '2'
 target_platform:
