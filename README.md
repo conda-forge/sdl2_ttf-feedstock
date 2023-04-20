@@ -1,11 +1,11 @@
-About sdl2_ttf
-==============
+About sdl2_ttf-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sdl2_ttf-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/libsdl-org/SDL_ttf
 
 Package license: Zlib
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sdl2_ttf-feedstock/blob/main/LICENSE.txt)
 
 Summary: Library for using TrueType fonts in SDL applications
 
