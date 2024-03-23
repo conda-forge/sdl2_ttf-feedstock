@@ -1,0 +1,70 @@
+From 6e0865e673ced85f9b82a30f36ec23bfb750f0d0 Mon Sep 17 00:00:00 2001
+From: Anonymous Maarten <anonymous.maarten@gmail.com>
+Date: Sat, 23 Mar 2024 14:39:49 +0100
+Subject: [PATCH 1/2] cmake: set MACHO_{COMPATIBILITY,CURRENT}_VERSION
+ properties
+
+These properties set the internal properties,
+SOVERSION determines the output filename.
+---
+ CMakeLists.txt | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e52d048..4a73b92 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -120,11 +120,11 @@ if(NOT ANDROID)
+         DEBUG_POSTFIX "${SDL2TTF_DEBUG_POSTFIX}"
+     )
+     if(APPLE)
+-        # the SOVERSION property corresponds to the compatibility version and VERSION corresponds to the current version
+-        # https://cmake.org/cmake/help/latest/prop_tgt/SOVERSION.html#mach-o-versions
++        cmake_minimum_required(VERSION 3.17)
+         set_target_properties(SDL2_ttf PROPERTIES
+-            SOVERSION "${DYLIB_COMPATIBILITY_VERSION}"
+-            VERSION "${DYLIB_CURRENT_VERSION}"
++            SOVERSION "${LT_MAJOR}"
++            MACHO_COMPATIBILITY_VERSION "${DYLIB_COMPATIBILITY_VERSION}"
++            MACHO_CURRENT_VERSION "${MACHO_CURRENT_VERSION}"
+         )
+     else()
+         set_target_properties(SDL2_ttf PROPERTIES
+
+From 48a4b0deb4e75b5c54705f65ee24ad7a4708e332 Mon Sep 17 00:00:00 2001
+From: Anonymous Maarten <anonymous.maarten@gmail.com>
+Date: Sat, 23 Mar 2024 14:46:42 +0100
+Subject: [PATCH 2/2] cmake: don't set properties twice
+
+---
+ CMakeLists.txt | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4a73b92..3b581ab 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -263,23 +263,6 @@ elseif (UNIX AND NOT APPLE AND NOT ANDROID)
+         VERSION "${LT_VERSION}"
+     )
+ endif()
+-if (BUILD_SHARED_LIBS)
+-    if (WIN32 OR OS2)
+-        set_target_properties(SDL2_ttf PROPERTIES
+-            PREFIX ""
+-        )
+-    endif()
+-    if (OS2)
+-        # OS/2 doesn't support a DLL name longer than 8 characters.
+-        set_target_properties(SDL2_ttf PROPERTIES
+-           OUTPUT_NAME "SDL2ttf"
+-        )
+-    elseif (UNIX AND NOT APPLE AND NOT ANDROID)
+-        set_target_properties(SDL2_ttf PROPERTIES
+-            OUTPUT_NAME "SDL2_ttf-${LT_RELEASE}"
+-        )
+-    endif()
+-endif()
+ 
+ # Restore BUILD_SHARED_LIBS variable
+ set(BUILD_SHARED_LIBS "${SDL2TTF_BUILD_SHARED_LIBS}")
