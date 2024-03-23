@@ -20,7 +20,7 @@ cmake --install .
 if [[ "${target_platform}" == osx-* ]]; then
     cd ${PREFIX}/lib
     ln -s ./libSDL2_ttf-2.0.0.dylib ./libSDL2_ttf-2.0.2201.0.0.dylib
-    ln -s ./libSDL2_ttf-2.0.0.dylib ./lib/libSDL2_ttf-2.0.2001.2.0.dylib
-    ln -s ./libSDL2_ttf-2.0.0.dylib ./lib/libSDL2_ttf-2.0.2001.1.0.dylib
-    ln -s ./libSDL2_ttf-2.0.0.dylib ./lib/libSDL2_ttf-2.0.15.0.0.dylib
+    ln -s ./libSDL2_ttf-2.0.0.dylib ./libSDL2_ttf-2.0.2001.2.0.dylib
+    ln -s ./libSDL2_ttf-2.0.0.dylib ./libSDL2_ttf-2.0.2001.1.0.dylib
+    ln -s ./libSDL2_ttf-2.0.0.dylib ./libSDL2_ttf-2.0.15.0.0.dylib
 fi
