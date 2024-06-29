@@ -1,5 +1,7 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -7,7 +9,7 @@ channel_targets:
 freetype:
 - '2'
 harfbuzz:
-- '8'
+- '9'
 sdl2:
 - '2'
 target_platform:
