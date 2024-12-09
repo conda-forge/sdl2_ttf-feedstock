@@ -9,8 +9,10 @@ channel_targets:
 freetype:
 - '2'
 harfbuzz:
-- '9'
+- '10'
 sdl2:
+- '2'
+sdl2_ttf:
 - '2'
 target_platform:
 - win-64
