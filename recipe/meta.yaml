@@ -1,4 +1,4 @@
-{% set version = "2.22.0" %}
+{% set version = "2.24.0" %}
 
 package:
   name: sdl2_ttf
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://github.com/libsdl-org/SDL_ttf/archive/refs/tags/release-{{ version }}.tar.gz
-  sha256: 2275d0ddfffa53f0efa628bc1621f662dacbd42467b5a44db99e38255fbb575a
+  sha256: 58a5aa00debe23e7be871961ae7b11a620b1ab6f28fce300d90a76b49200b6bb
   patches:
     # backport of https://github.com/libsdl-org/SDL_ttf/pull/349
     - patches/349.patch  # [osx]
 
 build:
-  number: 3
+  number: 0
   run_exports:
     # see https://abi-laboratory.pro/tracker/timeline/sdl_ttf
     - {{ pin_subpackage("sdl2_ttf", max_pin="x") }}
