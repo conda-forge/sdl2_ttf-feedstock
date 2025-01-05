@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/libsdl-org/SDL_ttf/archive/refs/tags/release-{{ version }}.tar.gz
-  sha256: 58a5aa00debe23e7be871961ae7b11a620b1ab6f28fce300d90a76b49200b6bb
+  sha256: 2c45241a56203a59d66ec6b4eae9457e5675fc609376566a257391fd29d341a2
 
 build:
   number: 0
