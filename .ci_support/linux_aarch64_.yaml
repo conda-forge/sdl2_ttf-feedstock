@@ -17,7 +17,7 @@ docker_image:
 freetype:
 - '2'
 harfbuzz:
-- '10'
+- '11'
 sdl2:
 - '2'
 sdl2_ttf:
